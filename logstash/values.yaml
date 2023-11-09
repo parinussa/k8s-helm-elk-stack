@@ -6,8 +6,10 @@ replicas: 1
 #
 # Note that when overriding logstash.yml, `http.host: 0.0.0.0` should always be included
 # to make default probes work.
-logstashConfig: {}
-#  logstash.yml: |
+logstashConfig:
+ logstash.yml: |
+    monitoring.elasticsearch.hosts: http://elasticsearch-master:9200
+
 #    key:
 #      nestedkey: value
 #  log4j2.properties: |
